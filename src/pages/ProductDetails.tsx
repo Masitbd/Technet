@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom';
 export default function ProductDetails() {
   const { id } = useParams();
 
-  const {data:product, isLoading, error} = useSingleProductQuery(id)
+  const {data: product, isLoading, error} = useSingleProductQuery(id)
 
   //! Temporary code, should be replaced with redux
   // const [data, setData] = useState<IProduct[]>([]);
@@ -32,14 +32,14 @@ export default function ProductDetails() {
           <h1 className="text-3xl font-semibold">{product?.name}</h1>
           <p className="text-xl">Rating: {product?.rating}</p>
           <ul className="space-y-1 text-lg">
-            {product?.features?.map((feature: string) => (
+            {product?.features?.map((feature:string) => (
               <li key={feature}>{feature}</li>
             ))}
           </ul>
           <Button>Add to cart</Button>
         </div>
       </div>
-      <ProductReview />
+      <ProductReview id={id!} />
     </>
   );
 }
