@@ -4,7 +4,8 @@ import { Button } from './ui/button';
 import { Textarea } from './ui/textarea';
 import { FiSend } from 'react-icons/fi';
 import { useAppSelector } from '@/redux/hooks';
-import { useGetReviewsQuery, usePostCommentsMutation } from '@/redux/api/apiSlice';
+import { usePostCommentsMutation, useGetReviewsQuery } from '@/redux/features/products/productApi';
+
 
 /* const dummyComments = [
   'Bhalo na',

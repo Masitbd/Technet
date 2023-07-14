@@ -69,6 +69,16 @@ export default function Navbar() {
                     <DropdownMenuItem className="cursor-pointer">
                       Subscription
                     </DropdownMenuItem>
+                    <Link to ='/login'>
+                    <DropdownMenuItem className="cursor-pointer">
+                      Login
+                    </DropdownMenuItem>
+                    </Link>
+                   <Link  to='signup'>
+                   <DropdownMenuItem className="cursor-pointer">
+                      SignUp
+                    </DropdownMenuItem>
+                   </Link>
                   </DropdownMenuContent>
                 </DropdownMenu>
               </li>
